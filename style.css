@@ -2,6 +2,11 @@ h2 {
     color: rgba(85, 142, 192, 0.77);
 }
 
+body > p {
+    color: blueviolet;
+    font-size: 2rem;
+}
+
 div {
     border: solid black 1px;
     height: 100px;
