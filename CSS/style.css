@@ -136,7 +136,7 @@ body {
 	background: white;
 }
 
-.card .website:before {
+.card .bottom_face .links .menu .website:before {
 	box-sizing: border-box;
 	content: "\e743";
 }
