@@ -63,12 +63,12 @@ body {
 	overflow: hidden;
 }
 
-.card .container .top_face img {
+.card .top_face img {
 	height: 100%;
 	width: 100%;
 }
 
-.card .bottom_face {
+.card .back_face {
 	background: rgb(107, 139, 175, 0);
 	opacity: 0;
 	transform:
@@ -78,7 +78,7 @@ body {
 	transition: background 1s, transform 0.75s, opacity 0.5s;
 }
 
-.card .bottom_face p {
+.card .back_face p {
 	/*border: 1px solid blue;*/
 	color: white;
 	margin: 16px;
@@ -86,14 +86,14 @@ body {
 	line-height: 150%;
 }
 
-.card .bottom_face .links {
+.card .back_face .links {
 	/*border: 1px solid red;*/
 	position: relative;
 	top: 15%;
 	height: 30%;
 }
 
-.card .bottom_face .links .menu {
+.card .back_face .links .menu {
 	/*border: 1px solid black;*/
 	position: relative;
 	height: 100%;
@@ -108,7 +108,7 @@ body {
 	align-items: center;
 }
 
-.card .bottom_face .links .menu li {
+.card .back_face .links .menu li {
 	border: 1px solid #fff;
 	position: relative;
 	height: 60%;
@@ -120,7 +120,7 @@ body {
 	transition: ease 0.25s;
 }
 
-.card .bottom_face .links a {
+.card .back_face .links a {
 	/*border: 1px solid blue;*/
 	position: absolute;
 	height: 100%;
@@ -131,25 +131,25 @@ body {
 	text-decoration: none;
 }
 
-.card .bottom_face .links li:hover {
+.card .back_face .links li:hover {
 	color: black;
 	background: white;
 }
 
-.card .bottom_face .links .menu .website:before {
+.card .back_face .links .menu .website:before {
 	box-sizing: border-box;
 	content: "\e743";
 }
 
-.card .bottom_face .links .menu .facebook:before {
+.card .back_face .links .menu .facebook:before {
 	content: "\e741";
 }
 
-.card .bottom_face .links .menu .instagram:before {
+.card .back_face .links .menu .instagram:before {
 	content: "\e73d";
 }
 
-.card:hover .bottom_face {
+.card:hover .back_face {
 	background: rgb(107, 139, 175, 0.7);
 	opacity: 1;
 	transform:
