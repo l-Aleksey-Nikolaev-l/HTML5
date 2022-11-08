@@ -1,16 +1,26 @@
-/*.card, .container, .top_face, .bottom_face {*/
+/** {*/
 /*	border: 1px solid black;*/
 /*}*/
 body {
-	background: #444;
+	background: rgba(6, 21, 33, 0.85);
+	font-family: sans-serif;
 }
 
-.about_me {
+.about_park {
 	position: absolute;
 	width: 300px;
 	height: 400px;
 	top: 50%;
-	left: 50%;
+	left: 200px;
+	transform: translate(-50%, -50%);
+}
+
+.about_village {
+	position: absolute;
+	width: 300px;
+	height: 400px;
+	top: 50%;
+	left: 550px;
 	transform: translate(-50%, -50%);
 }
 
@@ -19,11 +29,18 @@ body {
 	height: 100%;
 	width: 100%;
 	background: antiquewhite;
+	box-shadow:
+			4px 4px 4px 0 rgba(0, 0, 0, 0.1),
+			8px 8px 0 0 rgba(250, 235, 215, 0.7),
+			12px 12px 4px 0 rgba(0, 0, 0, 0.1),
+			-1px -1px 4px 0 rgba(250, 235, 215, 0.1);
 }
 
 .card > p {
 	position: absolute;
-	bottom: 0;
+	margin: 16px;
+	line-height: 24px;
+	top: 60%;
 }
 
 .container {
@@ -39,39 +56,103 @@ body {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	user-select: none;
 }
 
 .card .top_face {
-	z-index: 1;
 	background: #7a7a7a;
-	font-family: sans-serif;
 	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	transition: all 0.25s;
+}
+
+.card .container .top_face img {
+	height: 100%;
+	width: 100%;
 }
 
 .card .bottom_face {
-	z-index: 0;
+	background: rgb(107, 139, 175, 0);
+	opacity: 0;
+	transform:
+			rotateY(180deg)
+			scale(0.5);
+	transition-timing-function: cubic-bezier(0, 0, 0, 1);
+	transition: background 1s, transform 0.75s, opacity 0.5s;
+}
+
+.card .bottom_face p {
+	/*border: 1px solid blue;*/
+	color: white;
+	margin: 16px;
+	font-size: 24px;
+	line-height: 150%;
+}
+
+.card .bottom_face .links {
+	/*border: 1px solid red;*/
+	position: relative;
+	top: 15%;
 	height: 30%;
-	width: 30%;
-	background: rgb(107, 139, 175);
+}
+
+.card .bottom_face .links .menu {
+	/*border: 1px solid black;*/
+	position: relative;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 'themify', serif;
+	font-size: 24px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card .bottom_face .links .menu li {
+	border: 1px solid #fff;
+	position: relative;
+	height: 60%;
+	width: 15%;
+	margin: 5%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: sans-serif;
-	font-size: 0;
-	opacity: 0;
-	transform: rotateY(180deg);
-	transition: all 0.75s;
+	transition: ease 0.25s;
 }
 
-.card .container:hover .bottom_face{
-	z-index: 10;
-	opacity: 0.8;
+.card .bottom_face .links a {
+	/*border: 1px solid blue;*/
+	position: absolute;
 	height: 100%;
 	width: 100%;
-	font-size: 1.5rem;
-	transform: rotateY(0deg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.card .bottom_face .links li:hover {
+	color: black;
+	background: white;
+}
+
+.card .website:before {
+	box-sizing: border-box;
+	content: "\e743";
+}
+
+.card .bottom_face .links .menu .facebook:before {
+	content: "\e741";
+}
+
+.card .bottom_face .links .menu .instagram:before {
+	content: "\e73d";
+}
+
+.card:hover .bottom_face {
+	background: rgb(107, 139, 175, 0.7);
+	opacity: 1;
+	transform:
+			rotateY(0deg)
+			scale(1);
 }
