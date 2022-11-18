@@ -22,7 +22,8 @@
 html {
 	-webkit-font-smoothing: antialiased;
 	scroll-behavior: smooth;
-	font-family: "Courier New", sans-serif;
+	/*font-family: "Courier New", sans-serif;*/
+	font-family: "Atkinson Hyperlegible Regular", Arial, Helvetica, sans-serif;
 	background: rgba(6, 21, 33, 0.85);
 }
 
@@ -39,10 +40,14 @@ body {
 /*============================================================*/
 
 .top-area {
+	background-image: url('/content/first_backplane.jpg');
 	position: relative;
 	display: flex;
 	height: 100vh;   /* ===================== */
 	background-size: cover;
+	background-attachment: fixed;
+	/*background-position: center;*/
+	/*background-repeat: no-repeat;*/
 	justify-content: center;
 	align-items: center;
 	user-select: none;
@@ -70,7 +75,7 @@ body {
 	/*border: 1px solid rgba(255, 255, 255, 0.5);*/
 	color: rgba(255, 255, 255, 0.90);
 	font-size: 90px;
-	font-weight: normal;
+	font-weight: lighter;
 	margin: 0 0 36px 0;
 }
 
@@ -78,7 +83,9 @@ body {
 	/*border: 1px solid rgba(255, 255, 255, 0.5);*/
 	width: 100%;
 	color: rgba(255, 255, 255, 0.90);
-	font-size: 36px;
+	font-size: 2.5rem;
+	letter-spacing: 4px;
+	line-height: 3.5rem;
 	margin: auto;
 }
 
@@ -167,7 +174,8 @@ body {
 	/*border: 1px solid rgb(255, 255, 255);*/
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.80);
-	font-size: 1.2rem;
+	font-size: 1.5rem;
+	letter-spacing: 1px;
 	white-space: nowrap;
 	transition: color 0.25s;
 }
@@ -195,6 +203,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	user-select: none;
 }
 
 .container_label .container_label_left {
@@ -215,7 +224,8 @@ body {
 
 .container_label .container_label_center p{
 	color: rgba(255, 255, 255, 0.80);
-	font-size: 36px;
+	font-size: 40px;
+	letter-spacing: 4px;
 	white-space: nowrap;
 }
 
@@ -268,7 +278,8 @@ body {
 	margin: auto;
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.80);
-	font-size: 1.2rem;
+	line-height: 2rem;
+	font-size: 1.5rem;
 }
 
 .about_me .avatar_container {
@@ -383,7 +394,8 @@ body {
 	margin: auto;
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.80);
-	font-size: 1.2rem;
+	line-height: 2rem;
+	font-size: 1.5rem;
 }
 
 /*============================================================*/
@@ -392,7 +404,7 @@ body {
 
 .skills {
 	background: #31383d;
-	height:1080px;
+	height: 1080px;
 	width: 100%;
 	scroll-margin-top: 55px;
 	z-index: 30;
@@ -407,28 +419,22 @@ body {
 	/*border: 1px solid rgb(255, 0, 0);*/
 	position: absolute;
 	top: 220px;
+	left: 50%;
+	transform: translateX(-50%);
 	bottom: 50px;
-	width: 100%;
+	width: 150%;
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
-	/*align-items: center;*/
-	/*align-items: stretch;*/
-	box-shadow: 5px 5px 20px rgba(20, 20, 20, 0.2);
 }
 
-.skills .skill_html,
-.skills .skill_css,
-.skills .skill_csharp,
-.skills .skill_cpp,
-.skills .skill_webstorm,
-.skills .skill_windows {
+.skills .skill {
 	/*background: rgba(255, 226, 171, 0.13);*/
 	/*border: 1px solid black;*/
 	position: relative;
 	height: 150px;
 	width: 150px;
-	margin: 34px;
+	margin: 0 86px 0 86px;
 }
 
 .skills .card {
@@ -439,7 +445,7 @@ body {
 	display: flex;
 	justify-content: center;
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
-	transition: box-shadow 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 .skills .card .card_top {
@@ -449,14 +455,16 @@ body {
 	position: absolute;
 	height: 100%;
 	width: 100%;
+	overflow: hidden;
 	display: flex;
 	justify-content: center;
+	user-select: none;
 }
 
 .skills .card .card_top .image_card_top {
 	/*border: 1px solid #ff0000;*/
 	position: absolute;
-	opacity: 0.1;
+	opacity: 0.2;
 	height: 100%;
 	transition: opacity 0.4s;
 }
@@ -464,7 +472,7 @@ body {
 .skills .card .card_bottom {
 	/*border: 1px solid #ff0000;*/
 	position: absolute;
-	width: 150%;
+	width: 200%;
 	top: 0;
 	opacity: 0;
 	transform: scale(0);
@@ -472,18 +480,21 @@ body {
 }
 
 .skills .card .card_bottom p {
-	margin: 4%;
+	margin-top: 1rem;
 	color: rgba(255, 255, 255, 0.80);
-	font-size: 1.2rem;
+	line-height: 2rem;
+	font-size: 1.5rem;
 }
 
 .skills .card .card_top .image_card_top:hover,
 .skills .card .card_bottom:hover ~ .card_top .image_card_top {
-	opacity: 0.6;
+	opacity: 0.75;
 }
 
 .skills .card:hover {
-	box-shadow: 0 -10px 15px 0 rgba(0, 0, 0, 0.1);
+	transform-origin: bottom;
+	transform: rotateX(10deg);
+	box-shadow: 0 -15px 15px 0 rgba(29, 32, 36, 0.15);
 }
 
 .skills .card:hover > .card_bottom,
@@ -491,6 +502,56 @@ body {
 	opacity: 1;
 	top: 100%;
 	transform: scale(1);
+}
+
+@media only screen and (max-width: 1600px) {
+	
+	.skills .skills_container {
+		/*justify-content: space-between;*/
+		justify-content: space-around;
+		flex-flow: row wrap;
+		width: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	
+	.skills .card .card_bottom {
+		display: none;
+		/*width: 370%;*/
+	}
+	
+	.skills .card:hover {
+		box-shadow: 0 -15px 15px 0 rgba(29, 32, 36, 0.15),
+					0 4px 0 rgba(255, 0, 0, 0.1);
+	}
+}
+
+/*============================================================*/
+/*========== MIDDLE AREA                                           */
+/*============================================================*/
+
+.middle-area {
+	background-image: url('/content/second_backplane.jpg');
+	position: relative;
+	display: flex;
+	height: 50vh;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
+.middle-area:before {
+	position: absolute;
+	content: '';
+	background: rgba(0, 0, 0, 0.6);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 /*============================================================*/
@@ -545,6 +606,34 @@ body {
 }
 
 /*============================================================*/
+/*========== BOTTOM AREA                                           */
+/*============================================================*/
+
+.bottom-area {
+	background-image: url('/content/third_backplane.jpg');
+	position: relative;
+	display: flex;
+	height: 50vh;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
+.bottom-area:before {
+	position: absolute;
+	content: '';
+	background: rgba(0, 0, 0, 0.2);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+/*============================================================*/
 /*==========  CONTACTS                                        */
 /*============================================================*/
 
@@ -559,4 +648,89 @@ body {
 .contacts .container_label {
 	/*border: 1px solid rgb(192, 192, 192);*/
 	top: 50px;
+}
+
+.contacts .contacts_zone {
+	/*border: 1px solid red;*/
+	position: absolute;
+	height: 100px;
+	width: 100%;
+	top: 35%;
+	display: flex;
+	justify-content: center;
+}
+
+.contacts .contacts_zone a {
+	text-decoration: none;
+	margin: 0 32px 0 32px;
+	background: rgba(29, 32, 36, 0.18);
+	box-shadow: 0 5px 10px 0 rgba(29, 32, 36, 0.10);
+	transition: ease-in-out 0.2s;
+}
+
+.contacts .contacts_zone img {
+	opacity: 0.2;
+	width: 80px;
+	margin: 10px;
+	transition: ease-in-out 0.2s;
+}
+
+.contacts .contacts_zone a:hover img{
+	opacity: 0.7;
+	background: rgba(43, 48, 54, 0.18);
+}
+
+.contacts .contacts_zone a:hover {
+	background: rgba(29, 32, 36, 0.5);
+	/*background: #1d2024;*/
+	transform-origin: bottom;
+	transform: rotateX(10deg);
+	box-shadow: 0 -15px 15px 0 rgba(29, 32, 36, 0.15);
+}
+
+.contacts .links_zone {
+	/*border: 1px solid #000dff;*/
+	position: absolute;
+	height: 40px;
+	width: 100%;
+	top: 72%;
+	display: flex;
+	justify-content: center;
+}
+
+.contacts .links_zone a {
+	/*border: 1px solid #b700ff;*/
+	color: white;
+	margin: 0 24px 0 24px;
+	opacity: 0.4;
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	transition: ease-in-out 0.2s;
+}
+
+.contacts .links_zone img {
+	height: 100%;
+}
+
+.contacts .links_zone a:hover {
+	opacity: 0.7;
+}
+
+.contacts .copyright {
+	/*border: 1px solid #b700ff;*/
+	position: absolute;
+	height: 30px;
+	width: 100%;
+	bottom: 8px;
+	display: flex;
+	justify-content: center;
+}
+
+.contacts .copyright p {
+	/*border: 1px solid #b700ff;*/
+	position: absolute;
+	margin: 0;
+	bottom: 0;
+	color: rgba(255, 255, 255, 0.8);
 }
