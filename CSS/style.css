@@ -35,6 +35,19 @@ body {
 	transition-delay: 0.5s;
 }
 
+.parallax {
+	position: relative;
+	display: flex;
+	height: 50vh;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
 /*============================================================*/
 /*========== TOP AREA                                         */
 /*============================================================*/
@@ -532,16 +545,6 @@ body {
 
 .middle-area {
 	background-image: url('/content/second_backplane.jpg');
-	position: relative;
-	display: flex;
-	height: 50vh;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	justify-content: center;
-	align-items: center;
-	user-select: none;
 }
 
 .middle-area:before {
@@ -577,7 +580,7 @@ body {
 
 .education {
 	background: #31383d;
-	height:1080px;
+	height: 1200px;
 	width: 100%;
 	scroll-margin-top: 55px;
 	z-index: 50;
@@ -588,13 +591,75 @@ body {
 	top: 60px;
 }
 
+.education .education_container {
+	/*border: 1px solid rgb(192, 192, 192);*/
+	position: absolute;
+	width: 100%;
+	top: 220px;
+	bottom: 50px;
+	box-shadow: 5px 5px 20px rgba(20, 20, 20, 0.2);
+}
+
+.education .edu {
+	/*border: 1px solid rgb(103, 204, 92);*/
+	position: relative;
+	height: 180px;
+	display: flex;
+	margin: 36px 24px 56px 24px;
+}
+
+.education .edu .edu_image {
+	/*border: 1px solid rgb(204, 92, 92);*/
+	position: relative;
+	justify-content: center;
+	height: 150px;
+	width: 150px;
+}
+
+.education .edu .edu_image img {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	opacity: 0.8;
+}
+
+.education .edu .edu_description {
+	/*border: 1px solid rgb(92, 111, 204);*/
+	position: relative;
+	margin-left: 16px;
+}
+
+.education .edu .edu_description .caption {
+	line-height: 2.2rem;
+	font-size: 1.8rem;
+	text-shadow: 4px 4px 8px rgba(255, 0, 0, 0.1);
+}
+
+.education .edu .edu_description a{
+	text-decoration: none;
+	color: rgba(183, 208, 255, 0.8);
+}
+
+.education .edu .edu_description a:hover{
+	color: rgba(83, 142, 255, 0.8);
+	text-shadow: 0 0 8px rgba(83, 142, 255, 0.8);
+}
+
+.education .edu .edu_description p {
+	/*border: 1px solid rgb(92, 111, 204);*/
+	margin: 0;
+	color: rgba(255, 255, 255, 0.80);
+	line-height: 1.8rem;
+	font-size: 1.4rem;
+}
+
 /*============================================================*/
 /*========== HOBBY                                            */
 /*============================================================*/
 
 .hobby {
 	background: #394248;
-	height:1080px;
+	height:700px;
 	width: 100%;
 	scroll-margin-top: 55px;
 	z-index: 60;
@@ -605,22 +670,68 @@ body {
 	top: 60px;
 }
 
+.hobby .hobby_container {
+	/*border: 1px solid red;*/
+	position: absolute;
+	top: 180px;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.hobby .card {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 36px;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.hobby .card .card_top {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	background: #31383d;
+}
+
+.hobby .card .card_top .image_card_top {
+	position: relative;
+	opacity: 0.8;
+	width: 80%;
+}
+
+.hobby .card .card_bottom {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	background: rgba(227, 239, 255, 0.8);
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	transition: ease-in-out top 0.5s, ease-out box-shadow 0.75s;
+}
+
+.hobby .card .card_bottom p {
+	position: relative;
+	margin: 8px;
+}
+
+.hobby .card:hover .card_bottom {
+	top: 100%;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+
 /*============================================================*/
 /*========== BOTTOM AREA                                           */
 /*============================================================*/
 
 .bottom-area {
 	background-image: url('/content/third_backplane.jpg');
-	position: relative;
-	display: flex;
-	height: 50vh;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	justify-content: center;
-	align-items: center;
-	user-select: none;
 }
 
 .bottom-area:before {
