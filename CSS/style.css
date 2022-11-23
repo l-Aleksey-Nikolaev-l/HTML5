@@ -49,6 +49,48 @@ body {
 }
 
 /*============================================================*/
+/*========== TOOLTIP                                          */
+/*============================================================*/
+
+.tooltip .tooltip_text::after {
+	content: "";
+	position: absolute;
+	top: 25%;
+	left: 100%;
+	margin-top: 2px;
+	border-width: 8px;
+	border-style: solid;
+	border-color: transparent transparent transparent rgba(255, 255, 255, 0.1);
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltip_text {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-95%);
+	right: 120%;
+	width: 130px;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: rgba(255, 255, 255, 0.80);
+	letter-spacing: 1px;
+	text-align: center;
+	padding: 4px 0;
+	border-radius: 4px;
+	opacity: 0;
+	transition: ease-in-out 0.4s;
+	transition-delay: 0.2s;
+}
+
+
+.tooltip:hover .tooltip_text {
+	opacity: 1;
+}
+
+/*============================================================*/
 /*========== TOP AREA                                         */
 /*============================================================*/
 
@@ -412,6 +454,24 @@ body {
 }
 
 /*============================================================*/
+/*========== MIDDLE AREA ONE                                  */
+/*============================================================*/
+
+.middle-area_one {
+	background-image: url('/content/second_backplane.jpg');
+}
+
+.middle-area_one:before {
+	position: absolute;
+	content: '';
+	background: rgba(0, 0, 0, 0.6);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+/*============================================================*/
 /*========== SKILLS                                           */
 /*============================================================*/
 
@@ -539,23 +599,29 @@ body {
 	}
 }
 
-/*============================================================*/
-/*========== MIDDLE AREA                                           */
-/*============================================================*/
 
-.middle-area {
-	background-image: url('/content/second_backplane.jpg');
-}
 
-.middle-area:before {
-	position: absolute;
-	content: '';
-	background: rgba(0, 0, 0, 0.6);
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*============================================================*/
 /*==========  EXPERIENCE                                      */
@@ -563,7 +629,7 @@ body {
 
 .experience {
 	background: #394248;
-	height:1080px;
+	height:1150px;
 	width: 100%;
 	scroll-margin-top: 55px;
 	z-index: 40;
@@ -573,6 +639,135 @@ body {
 	/*border: 1px solid rgb(192, 192, 192);*/
 	top: 60px;
 }
+
+.experience .experience_container {
+	/*border: 1px solid rgb(0, 0, 0);*/
+	position: absolute;
+	width: 100%;
+	top: 220px;
+	bottom: 50px;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+}
+
+.experience .experience_block {
+	/*border: 1px solid rgb(192, 192, 192);*/
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 5px 5px 20px rgba(20, 20, 20, 0.2);
+}
+
+.experience .experience_description {
+	/*border: 1px solid rgb(255, 0, 0);*/
+	position: relative;
+	margin: 16px;
+}
+
+.experience .experience_description .caption {
+	/*border: 1px solid rgb(0, 0, 0);*/
+	display: block;
+	margin-bottom: 8px;
+	font-size: 1.8rem;
+	font-weight: bold;
+	letter-spacing: 4px;
+	text-shadow: 4px 4px 8px rgba(255, 0, 0, 0.05);
+}
+
+.experience .experience_description p {
+	/*border: 1px solid rgb(92, 111, 204);*/
+	margin: 16px;
+	color: rgba(255, 255, 255, 0.80);
+	line-height: 1.8rem;
+	font-size: 1.4rem;
+}
+
+.experience .experience_logos {
+	/*border: 1px solid rgb(0, 255, 0);*/
+	position: relative;
+	right: 0;
+	width: 150px;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+	align-items: center;
+	margin: 16px;
+}
+
+.experience .experience_logos img {
+	/*border: 1px solid rgb(0, 0, 162);*/
+	width: 100px;
+	opacity: 0.2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============================================================*/
+/*========== MIDDLE AREA TWO                                  */
+/*============================================================*/
+
+.middle-area_two {
+	background-image: url('/content/second_backplane.jpg');
+}
+
+.middle-area_two:before {
+	position: absolute;
+	content: '';
+	background: rgba(0, 0, 0, 0.6);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*============================================================*/
 /*==========  EDUCATION                                       */
@@ -597,61 +792,70 @@ body {
 	width: 100%;
 	top: 220px;
 	bottom: 50px;
+	display: flex;
+	flex-direction: column;
 	box-shadow: 5px 5px 20px rgba(20, 20, 20, 0.2);
 }
 
-.education .edu {
+.education .edu_description {
 	/*border: 1px solid rgb(103, 204, 92);*/
 	position: relative;
-	height: 180px;
-	display: flex;
-	margin: 36px 24px 56px 24px;
+	margin: 32px;
 }
 
-.education .edu .edu_image {
-	/*border: 1px solid rgb(204, 92, 92);*/
-	position: relative;
-	justify-content: center;
-	height: 150px;
-	width: 150px;
-}
-
-.education .edu .edu_image img {
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	opacity: 0.8;
-}
-
-.education .edu .edu_description {
-	/*border: 1px solid rgb(92, 111, 204);*/
-	position: relative;
-	margin-left: 16px;
-}
-
-.education .edu .edu_description .caption {
-	line-height: 2.2rem;
+.education .edu_description .caption {
+	/*border: 1px solid rgb(0, 0, 0);*/
+	display: block;
+	margin-bottom: 8px;
 	font-size: 1.8rem;
-	text-shadow: 4px 4px 8px rgba(255, 0, 0, 0.1);
+	font-weight: bold;
+	letter-spacing: 4px;
+	text-shadow: 4px 4px 8px rgba(255, 0, 0, 0.05);
 }
 
-.education .edu .edu_description a{
+.education .edu_description a {
+	/*border: 1px solid rgba(83, 142, 255, 0.8);*/
 	text-decoration: none;
 	color: rgba(183, 208, 255, 0.8);
+	transition: all 0.2s;
 }
 
-.education .edu .edu_description a:hover{
+.education .edu_description a:hover {
 	color: rgba(83, 142, 255, 0.8);
-	text-shadow: 0 0 8px rgba(83, 142, 255, 0.8);
+	text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-.education .edu .edu_description p {
-	/*border: 1px solid rgb(92, 111, 204);*/
+.education .edu_description p {
+	/*border: 1px solid rgb(255, 0, 0);*/
 	margin: 0;
 	color: rgba(255, 255, 255, 0.80);
-	line-height: 1.8rem;
 	font-size: 1.4rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*============================================================*/
 /*========== HOBBY                                            */
@@ -694,7 +898,6 @@ body {
 	height: 100%;
 	width: 100%;
 	display: flex;
-	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	background: #31383d;
@@ -703,7 +906,7 @@ body {
 .hobby .card .card_top .image_card_top {
 	position: relative;
 	opacity: 0.8;
-	width: 80%;
+	width: 40%;
 }
 
 .hobby .card .card_bottom {
@@ -718,7 +921,7 @@ body {
 
 .hobby .card .card_bottom p {
 	position: relative;
-	margin: 8px;
+	margin: 16px;
 }
 
 .hobby .card:hover .card_bottom {
