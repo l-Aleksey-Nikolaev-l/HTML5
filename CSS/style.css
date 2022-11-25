@@ -342,8 +342,19 @@ body {
 	margin: auto;
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.80);
-	line-height: 2rem;
+	line-height: 2.2rem;
 	font-size: 1.5rem;
+	letter-spacing: 2px;
+}
+
+.about_me .about_me_description .about_me_caption {
+	/*border: 1px solid rgb(0, 0, 0);*/
+	display: block;
+	margin-bottom: 8px;
+	font-size: 1.8rem;
+	font-weight: bold;
+	letter-spacing: 4px;
+	text-shadow: 4px 4px 8px rgba(255, 0, 0, 0.05);
 }
 
 .about_me .avatar_container {
@@ -382,7 +393,7 @@ body {
 
 .projects {
 	background: #394248;
-	height:1300px;
+	height:1450px;
 	width: 100%;
 	scroll-margin-top: 55px;
 	z-index: 20;
@@ -453,6 +464,16 @@ body {
 	margin: 0 24px 0 18px;
 }
 
+.projects .project_caption {
+	/*border: 1px solid rgb(0, 0, 0);*/
+	display: block;
+	margin-bottom: 8px;
+	font-size: 1.8rem;
+	font-weight: bold;
+	letter-spacing: 4px;
+	text-shadow: 4px 4px 8px rgba(255, 0, 0, 0.05);
+}
+
 .projects .project_container p {
 	/*border: 1px solid rgb(93, 141, 255);*/
 	margin: auto;
@@ -460,14 +481,6 @@ body {
 	color: rgba(255, 255, 255, 0.80);
 	line-height: 2rem;
 	font-size: 1.5rem;
-}
-
-/*============================================================*/
-/*========== MIDDLE AREA ONE                                  */
-/*============================================================*/
-
-.middle-area_one {
-	background-image: url('/content/second_backplane.jpg');
 }
 
 /*============================================================*/
@@ -551,6 +564,17 @@ body {
 	transition: all 0.2s;
 }
 
+.skills .card .card_bottom .skill_caption {
+	/*border: 1px solid #ff0000;*/
+	display: block;
+	text-align: center;
+	/*white-space: nowrap;*/
+	margin-bottom: 8px;
+	color: rgba(255, 255, 255, 0.80);
+	letter-spacing: 2px;
+	font-size: 1.5rem;
+}
+
 .skills .card .card_bottom p {
 	margin-top: 1rem;
 	color: rgba(255, 255, 255, 0.80);
@@ -596,6 +620,50 @@ body {
 		box-shadow: 0 -15px 15px 0 rgba(29, 32, 36, 0.15),
 					0 4px 0 rgba(255, 0, 0, 0.1);
 	}
+}
+
+/*============================================================*/
+/*========== MIDDLE AREA ONE                                  */
+/*============================================================*/
+
+.middle-area_one {
+	background-image: url('/content/second_backplane.jpg');
+}
+
+.middle-area_one .continues_block,
+.middle-area_two .continues_block {
+	/*border: 1px solid #ff0000;*/
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.middle-area_one h1,
+.middle-area_two h1 {
+	/*border: 1px solid #37ff00;*/
+	font-size: 2.5rem;
+	font-weight: bold;
+	letter-spacing: 4px;
+	color: rgba(255, 255, 255, 0.90);
+}
+
+.middle-area_one p,
+.middle-area_two p {
+	/*border: 1px solid #00ffc4;*/
+	color: rgba(255, 255, 255, 0.90);
+	line-height: 1.8rem;
+	font-size: 1.8rem;
+}
+
+.middle-area_one img,
+.middle-area_two img {
+	/*border: 1px solid #006cff;*/
+	opacity: 0.8;
+	width: 150px;
+	margin-bottom: 12px;
 }
 
 /*============================================================*/
@@ -828,6 +896,9 @@ body {
 	background-image: url('/content/third_backplane.jpg');
 }
 
+.parallax.bottom-area:before {
+	background: rgba(0, 0, 0, 0.2);
+}
 /*============================================================*/
 /*==========  CONTACTS                                        */
 /*============================================================*/
