@@ -98,7 +98,6 @@ body {
 /*============================================================*/
 
 .top-area {
-	background-image: url('/content/first_backplane.jpg');
 	position: relative;
 	display: flex;
 	height: 100vh;
@@ -569,10 +568,6 @@ body {
 /*========== MIDDLE AREAS                                     */
 /*============================================================*/
 
-.middle-area_one {
-	background-image: url('/content/second_backplane.jpg');
-}
-
 .middle-area_one .continues_block,
 .middle-area_two .continues_block {
 	/*border: 1px solid #ff0000;*/
@@ -675,14 +670,6 @@ body {
 .experience .experience_logos img {
 	width: 100px;
 	opacity: 0.2;
-}
-
-/*============================================================*/
-/*========== MIDDLE AREA TWO                                  */
-/*============================================================*/
-
-.middle-area_two {
-	background-image: url('/content/second_backplane.jpg');
 }
 
 /*============================================================*/
@@ -815,10 +802,6 @@ body {
 /*============================================================*/
 /*========== BOTTOM AREA                                      */
 /*============================================================*/
-
-.bottom-area {
-	background-image: url('/content/third_backplane.jpg');
-}
 
 .parallax.bottom-area:before {
 	background: rgba(0, 0, 0, 0.2);
