@@ -12,6 +12,7 @@
 
 html {
 	font-family: "Atkinson Hyperlegible Regular", Arial, Helvetica, sans-serif;
+	font-size: 3rem;
 	background: rgba(6, 21, 33, 0.85);
 }
 
@@ -33,7 +34,6 @@ body {
 	max-width: 600px;
 	padding: 40px 24px;
 	border-radius: 8px;
-	font-size: 3rem;
 	line-height: 6rem;
 	color: #051a32;
 	text-align: center;
