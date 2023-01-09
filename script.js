@@ -1,35 +1,18 @@
-const browserList = [
-    {name: "Firefox", value: "Firefox"},
-    {name: "Opera", value: "Opera"},
-    {name: "Edge", value: "Edg"},
-    {name: "Chrome", value: "Chrome"},
-    {name: "Safari", value: "Safari"}];
+const display = document.querySelector(".counter-preview");
+const allBtns = document.querySelector("#allBtns");
 
-const os = [
-    {name: "Android", value: "Android"},
-    {name: "iPhone", value: "iPhone"},
-    {name: "iPad", value: "Mac"},
-    {name: "Macintosh", value: "Mac"},
-    {name: "Linux", value: "Linux"},
-    {name: "Windows", value: "Windows"}];
+allBtns.addEventListener("click", counter);
 
-let browserChecker = () => {
+let value = 0;
 
-    let browserDetailsRef = document.getElementById("browser-details");
-    let osDetailsRef = document.getElementById("os-details");
-    let userDetail = navigator.userAgent;
-
-    for (let i in browserList) {
-        if (userDetail.includes(browserList[i].value)) {
-            browserDetailsRef.innerHTML = browserList[i].name;
-            break;
-        }
+function counter(e) {
+    const btn = e.target.id;
+    if (btn === "increment") {
+        value += 1;
+    } else if (btn === "decrement") {
+        value -= 1;
+    } else {
+        value = 0;
     }
-    for (let i in os) {
-        if (userDetail.includes(os[i].value)) {
-            osDetailsRef.innerHTML = os[i].name;
-            break;
-        }
-    }
-
-};
+    display.textContent = value;
+}

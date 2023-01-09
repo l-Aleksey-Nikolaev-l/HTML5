@@ -12,14 +12,17 @@
 		<script src="script.js"></script>
 	</head>
 	
-	<body onload="document.body.style.opacity='1'; browserChecker()">
+	<body onload="document.body.style.opacity='1'">
+	
+		<h1>Counter App</h1>
 		
-		<div id="container">
-			Browser: <span id="browser-details"></span>
-			<br>
-			OS: <span id="os-details"></span>
+		<p class="counter-preview">0</p>
+		<div class="buttons" id="allBtns">
+			<button class="decrement" id="decrement">Decrement</button>
+			<button class="reset" id="reset">Reset</button>
+			<button class="increment" id="increment">Increment</button>
 		</div>
-
+	
 	</body>
 
 </html>
