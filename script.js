@@ -1,7 +1,7 @@
-const display = document.querySelector(".counter-preview");
-const allBtns = document.querySelector("#allBtns");
+const display = document.querySelector("#counter-preview");
+const allButtons = document.querySelector("#allButtons");
 
-allBtns.addEventListener("click", counter);
+allButtons.addEventListener("click", counter);
 
 let value = 0;
 
