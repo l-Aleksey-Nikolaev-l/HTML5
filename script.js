@@ -3,6 +3,7 @@ const allButtons = document.querySelector("#allButtons");
 
 allButtons.addEventListener("click", counter);
 
+
 let value = 0;
 
 function counter(e) {
